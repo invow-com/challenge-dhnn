@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.hidden-content {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, height 0.8s ease;
+}
+
+.block-content {
+  opacity: 1;
+  height: auto;
+  transition: opacity 0.5s ease, height 0.8s ease;
+}
+
+.text-body-1 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.text-body-1-bold {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.text-body-2 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.text-overline {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.text-mobile-h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+}
+
+.text-desktop-h2 {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 60px;
+}
+
+.text-desktop-h6 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.text-inline-link-2 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.navbar-item:hover {
+  border-bottom: 3px solid blue;
+}
+
+.hover:border-b-2:hover {
+  border-color: red;
+}
